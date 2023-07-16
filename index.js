@@ -80,6 +80,9 @@ app.get('/customers/:customer_name/bookings', (req, res) => {
     const customerBookings = bookings.filter(booking => booking.customer_name === customer_name);
     res.json(customerBookings);
 });
+app.get('/', (req, res) => {
+    res.send("This is hall booking api")
+})
 
 // Helper function to generate unique IDs
 function generateId() {
